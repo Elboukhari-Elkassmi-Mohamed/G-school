@@ -1,0 +1,25 @@
+/* define some colors # */
+:root {
+  --vertsolid: #219F94;
+  --vert: #C1DEAE;
+  --jaune: #F2F5C8;
+  --jauneforce:#E8E8A6;
+  --degrade: linear-gradient(94deg, rgba(33,159,148,1) 0%, rgba(193,222,174,1) 49%, rgba(242,245,200,1) 100%);
+  --degrade-cards: rgb(33,214,199);
+  --sec-degrade-cards: linear-gradient(180deg, rgba(33,214,199,1) 0%, rgba(242,245,200,1) 64%);
+}
+  *{font-size:  "Montserrat", sans-serif;}
+  .background { background-color: var(--jaune);}
+  .admin-sidebar{color: var(--vertsolid);}
+  /* css for solve position navbar icones inside the input */
+  .position {position: relative; }
+  .position-a {position: absolute;right: 15px;top: 50%;transform: translateY(-50%);}
+  .position input {padding-right: 50px;}
+  /* end css for icons  */
+  .background-body{background: var(--vertsolid);background: var(--degrade);background-repeat: no-repeat;background-size: cover;}
+  .navbar-search-icone{color: var(--vertsolid);}
+  .navbar-notif-icone {color: var(--vertsolid);}
+  .card-style{border:4px solid rgb(202, 199, 199) ; background:var(--degrade-cards);background:var(--sec-degrade-cards);}
+  .hide-text{ -webkit-text-security: disc; /* Default */ }
+  .sidebar-you-logo{color: var(--vertsolid);}
+  
