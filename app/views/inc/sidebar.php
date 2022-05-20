@@ -23,7 +23,7 @@
                                 <i  class="far fa-bookmark px-1 ic " ></i> <span class="ms-1 d-none d-sm-inline  prop">Etudiants</span> </a>
                         </li>
                         <li class="">
-                            <a href="<?php echo URLROOT;?>/pages/professeurs" class="nav-link align-middle  text-dark">
+                            <a href="<?php echo URLROOT;?>/professeurs/viewprof" class="nav-link align-middle  text-dark">
                                 <i class="fal fa-graduation-cap ic"></i> <span class="ms-1 d-none d-sm-inline prop">Professeur</span></a>
                         </li>
                         <li class="">

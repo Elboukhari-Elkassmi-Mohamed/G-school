@@ -13,9 +13,58 @@
                     <h5 class=" fw-bolder d-none d-sm-block mx-3">PROFESSEURS</h5>
                     <div class="d-flex align-items-center">
                         <i class="far fs-6 fa-sort me-3 text-info d-sm-block"></i>
-                        <button class="add btn btn-info text text-white text-uppercase mx-4 py-2 ">
-                            AJOUTER UN PROFESSEUR
-                        </button>
+                        <button type="button" class=" btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Contact</button>
+
+<!-- Modal -->
+<form class="modal fade"  action="<?php echo URLROOT?>/professeurs/addprof"  method="POST" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Professeur </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Matricule </label>
+          <input type="text" id="" name="prof_Matricule" class="form-control form-control"placeholder="Enter Your Full name" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Nom_complet </label>
+          <input type="text" id=""  name="prof_NComplet" class="form-control form-control"placeholder="Enter Email" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Genre	</label>
+          <input type="text" id="" name="prof_Genre" class="form-control form-control"placeholder="Enter Number" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Class</label>
+          <input type="text" id="" name="prof_Class" class="form-control form-control"placeholder="Adresse" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Matiére</label>
+          <input type="text" id="" name="prof_Matiere" class="form-control form-control"placeholder="Adresse" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Phone</label>
+          <input type="text" id="" name="prof_Phone" class="form-control form-control"placeholder="Adresse" />
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit"  name="add"  class="btn btn-primary">Add Contact</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
                     </div>
                 </div>
             <hr>
@@ -37,40 +86,21 @@
                         </tr>
 
                         </thead>
-                        
+                        <?php  foreach ($data as $value) :?>
                         <tbody>
-                        <tr class=" bg-white ">
-                            <td>134124</td>
-                            <td class="d-none d-sm-table-cell">NOUREDDINE MAHER</td>
-                            <td class="d-none d-sm-table-cell">Homme</td>
-                            <td>Namek</td>
-                            <td class="d-none d-sm-table-cell">FRANCAIS</td>
-                            <td class="d-none d-sm-table-cell">06 34 54 54 98</td>
-                            <td><a href="#"><i class="fal fa-pen fs-6 text-info"></a></i></td>
-                            <td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>
-                        </tr>
-                        <th>
-                            <tr class=" bg-white ">
-                                <td>134124</td>
-                                <td class="d-none d-sm-table-cell">NOUREDDINE MAHER</td>
-                                <td class="d-none d-sm-table-cell">Homme</td>
-                                <td>Namek</td>
-                                <td class="d-none d-sm-table-cell">MATH</td>
-                                <td class="d-none d-sm-table-cell">06 34 54 54 98</td>
-                                <td><a href="#"><i class="fal fa-pen fs-6 text-info"></a></i></td>
-                                <td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>
-                            </tr>
-                            <th>
+                            <!--     -->
                                 <tr class=" bg-white ">
-                                    <td>134124</td>
-                                    <td class="d-none d-sm-table-cell">NOUREDDINE MAHER</td>
-                                    <td class="d-none d-sm-table-cell">Homme</td>
-                                    <td>Namek</td>
-                                    <td class="d-none d-sm-table-cell">SCIENCES ET PHYSIQUES</td>
-                                    <td class="d-none d-sm-table-cell">06 34 54 54 98</td>
+                                    <td class="d-none d-sm-table-cell"><?php echo $value-> Matricule ;?></td>
+                                    <td class="d-none d-sm-table-cell"><?php echo $value-> Nom_complet ;?></td>
+                                    <td class="d-none d-sm-table-cell"><?php echo $value-> Genre ;?></td>
+                                    <td class="d-none d-sm-table-cell"><?php echo $value-> Classe ;?></td>
+                                    <td class="d-none d-sm-table-cell"><?php echo $value-> Matiere ;?></td>
+                                    <td class="d-none d-sm-table-cell"><?php echo $value-> Phone ;?></td>
+
                                     <td><a href="#"><i class="fal fa-pen fs-6 text-info"></a></i></td>
                                     <td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>
                                 </tr>
+                                <?php endforeach ;?>
                         </tbody>
                     </table>
                     </div>

@@ -24,7 +24,7 @@
 
     // Login User
     public function login($email, $password){
-      $this->db->query('SELECT * FROM comptes WHERE email = :email AND password = :password ');
+      $this->db->query('SELECT * FROM admins WHERE Email = :email AND Pwd = :password ');
       $this->db->bind(':email', $email);
       $this->db->bind(':password', $password);
 
@@ -39,7 +39,7 @@
 
     // Find user by email
     public function findUserByEmail($email){
-      $this->db->query('SELECT * FROM comptes WHERE email = :email');
+      $this->db->query('SELECT * FROM admins WHERE Email = :email');
       // Bind value
       $this->db->bind(':email', $email);
 

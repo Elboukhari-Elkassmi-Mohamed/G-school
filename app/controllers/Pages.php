@@ -28,11 +28,11 @@
       $this->view('pages/parents');
     }
 
-    public function professeurs(){
+    // public function professeurs(){
      
      
-      $this->view('pages/professeurs');
-    }
+    //   $this->view('pages/professeurs');
+    // }
 
     
     public function statistique(){
