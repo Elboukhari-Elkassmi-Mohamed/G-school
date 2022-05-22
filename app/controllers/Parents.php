@@ -25,7 +25,7 @@
                 ];
             }
             $data = $this->parentmodel->ajouteparent($data);
-            redirect('pages/parents');
+            redirect('parents/viewparent');
         }
     }
 
