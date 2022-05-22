@@ -16,9 +16,57 @@
                     <h5 class=" fw-bolder d-none d-sm-block mx-3">PARENTS</h5>
                     <div class="d-flex align-items-center">
                         <i class="far fs-6 fa-sort me-3 text-info d-sm-block"></i>
-                        <button class="add btn btn-info text text-white text-uppercase mx-4 py-2 ">
-                            AJOUTER UN PARENT
-                        </button>
+                        <button type="button" class=" btn btn-info btn-lg " data-bs-toggle="modal" data-bs-target="#exampleModal">Add Parent</button>
+
+<!-- Modal -->
+<form class="modal fade"  action="<?php echo URLROOT?>/Parents/addparent"  method="POST" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Parent </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Matricule </label>
+          <input type="text" id="" name="Matricule" class="form-control form-control"placeholder="Enter Your Full name" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Nom complet </label>
+          <input type="text" id=""  name="Nom_complet" class="form-control form-control"placeholder="Enter Email" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Genre	</label>
+          <input type="text" id="" name="Genre" class="form-control form-control"placeholder="Enter Number" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Job</label>
+          <input type="text" id="" name="Job" class="form-control form-control"placeholder="Adresse" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Adresse</label>
+          <input type="text" id="" name="Adresse" class="form-control form-control"placeholder="Adresse" />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label" for="">Phone</label>
+          <input type="text" id="" name="Phone" class="form-control form-control"placeholder="Adresse" />
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit"  name="add"  class="btn btn-primary">Add Parent</button>
+      </div>
+    </div>
+  </div>
+</form>
+
                     </div>
                 </div>
             <hr>
