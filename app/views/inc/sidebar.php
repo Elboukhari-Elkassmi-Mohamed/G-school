@@ -19,7 +19,7 @@
                             </a>
                         </li>
                         <li class="">
-                            <a href="<?php echo URLROOT;?>/pages/etudiant" class="nav-link   align-middle text-dark">
+                            <a href="<?php echo URLROOT;?>/etudiants/showStudents" class="nav-link   align-middle text-dark">
                                 <i  class="far fa-bookmark px-1 ic " ></i> <span class="ms-1 d-none d-sm-inline  prop">Etudiants</span> </a>
                         </li>
                         <li class="">
