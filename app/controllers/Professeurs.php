@@ -31,5 +31,4 @@ class Professeurs extends Controller {
 
         redirect('professeurs/viewprof');    }
 
-
 }
