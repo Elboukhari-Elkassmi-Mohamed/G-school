@@ -29,6 +29,21 @@ class Professeurs extends Controller {
         }
         $data = $this->profmodel->addteachers($data);
 
-        redirect('professeurs/viewprof');    }
+        redirect('professeurs/viewprof'); 
+       }
 
-}
+       public function deletprof($id){
+
+
+        $this->profmodel->deletteacher($id);
+
+        redirect('professeurs/viewprof'); 
+
+
+         
+        }
+
+
+
+ }
+

@@ -97,8 +97,10 @@
                                     <td class="d-none d-sm-table-cell"><?php echo $value-> Matiere ;?></td>
                                     <td class="d-none d-sm-table-cell"><?php echo $value-> Phone ;?></td>
 
-                                    <td><a href="#"><i class="fal fa-pen fs-6 text-info"></a></i></td>
-                                    <td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>
+                                    <td>
+                                    <a href="#"><i class="fal fa-pen fs-6 text-info"></a></i>
+                                    <a href="<?php echo URLROOT; ?>/professeurs/deletprof/<?php echo $value->id ?>"><i class="fal fa-trash "></i></a>
+                                  </td>
                                 </tr>
                                 <?php endforeach ;?>
                         </tbody>
