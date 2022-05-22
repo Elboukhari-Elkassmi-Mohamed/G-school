@@ -86,8 +86,8 @@
                         </tr>
 
                         </thead>
-                        <?php  foreach ($data as $value) :?>
                         <tbody>
+                        <?php  foreach ($data as $value) :?>
                             <!--     -->
                                 <tr class=" bg-white ">
                                     <td class="d-none d-sm-table-cell"><?php echo $value-> Matricule ;?></td>
