@@ -27,5 +27,16 @@
             $data = $this->parentmodel->ajouteparent($data);
             redirect('parents/viewparent');
         }
+
+        public function deleteparent($id){
+
+
+            $this->parentmodel->deleteparent($id);
+    
+            redirect('parents/viewparent'); 
+    
+            
+             
+            }
     }
 

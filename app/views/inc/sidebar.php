@@ -27,7 +27,7 @@
                                 <i class="fal fa-graduation-cap ic"></i> <span class="ms-1 d-none d-sm-inline prop">Professeur</span></a>
                         </li>
                         <li class="">
-                            <a href="<?php echo URLROOT;?>/pages/parents" class="nav-link    align-middle text-dark ">
+                            <a href="<?php echo URLROOT;?>/parents/viewparent" class="nav-link    align-middle text-dark ">
                                 <i class="far fa-usd-square ic "></i> <span class="ms-1 d-none d-sm-inline prop">Parents</span></a>
                         </li>
                         <li class="">
