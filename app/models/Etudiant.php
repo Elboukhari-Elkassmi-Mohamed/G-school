@@ -85,4 +85,39 @@ class Etudiant {
         $results = $this->db->single();
         return $results ;
       }
+      // ----------------------------------------
+      public function GetStudentNumber(){
+        $this->db->query("SELECT COUNT(*) FROM `etudiants`");
+        if ($this->db->execute()) {
+          return true;
+      } else {
+          return false;
+      }
+
+      }
+      public function getMaleCount(){
+        $this->db->query("SELECT COUNT(*) FROM `etudiants` WHERE genre='M'");
+        if ($this->db->execute()) {
+          return true;
+      } else {
+          return false;
+      }
+      }
+      public function getFemaleCount(){
+        $this->db->query("SELECT COUNT(*) FROM `etudiants` WHERE genre='F'");
+        if ($this->db->execute()) {
+          return true;
+      } else {
+          return false;
+      }
+      }
+      
+      public function getNumberClass(){
+        $this->db->query("SELECT  COUNT(DISTINCT class) FROM `etudiants` ");
+        if ($this->db->execute()) {
+          return true;
+      } else {
+          return false;
+      }
+      }
 }

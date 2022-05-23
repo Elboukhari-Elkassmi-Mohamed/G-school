@@ -18,7 +18,7 @@
                             <div class="d-flex flex-column  ">
                                 <p class="card-title fs-6 mb-4 text-black text-center fw-bold">le nombre des étudiants</p>
                             </div>
-                          <p class="card-text text-end fw-bolder text-center  fs-3 mt-5">3435</p>
+                          <p class="card-text text-end fw-bolder text-center  fs-3 mt-5"><?php $data['studentNumber']?></p>
 
                         </div>
                       </div>
@@ -29,7 +29,7 @@
                             <div class="d-flex flex-column ">
                                 <p class="card-title fs-6 mb-4 text-black text-center fw-bold">Femme</p>
                             </div>
-                          <p class="card-text text-end fw-bolder text-center fs-3 mt-5">3435</p>
+                          <p class="card-text text-end fw-bolder text-center fs-3 mt-5"><?php $data['femaleCount']?></p>
 
                         </div>
                       </div>
@@ -39,7 +39,7 @@
                             <div class="d-flex flex-column ">
                                 <p class="card-title fs-6 mb-4 text-black text-center fw-bold">Homme</p>
                             </div>
-                          <p class="card-text text-end fw-bolder text-center  fs-3 mt-5">3435</p>
+                          <p class="card-text text-end fw-bolder text-center  fs-3 mt-5"><?php $data['maleCount']?></p>
 
                         </div>
                       </div>
@@ -50,7 +50,7 @@
                             <div class="d-flex flex-column ">
                                 <p class="card-title fs-6 mb-4 text-black text-center fw-bold">Classe <br>d'étudiants  :</p>
                             </div>
-                          <p class="card-text text-end fw-bolder text-center  fs-3 mt-4">3435</p>
+                          <p class="card-text text-end fw-bolder text-center  fs-3 mt-4"><?php $data['classNumber']?></p>
 
                         </div>
                       </div>
@@ -61,7 +61,7 @@
                             <div class="d-flex flex-column ">
                                 <p class="card-title fs-6 mb-4 text-black text-center fw-bold">le nombre <br>des professeurs  :</p>
                             </div>
-                          <p class="card-text text-end fw-bolder text-center fs-3 mt-5">3435</p>
+                          <p class="card-text text-end fw-bolder text-center fs-3 mt-5"><?php $data['profNumber']?></p>
 
                         </div>
                       </div>

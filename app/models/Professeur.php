@@ -59,7 +59,16 @@ class Professeur {
 
 
      }
+     // ---------------------------------------------
+     public function getProfsNumber(){
+      $this->db->query("SELECT COUNT(*) FROM professeurs");
 
+      if ($this->db->execute()) {
+        return true;
+    } else {
+        return false;
+    }
+     }
      
 
 }
