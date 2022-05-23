@@ -12,7 +12,7 @@
             // Get posts
             $data = $this->studentModel->getStudents();
 
-            $this->view('pages/etudiant', $data);
+            $this->view('pages/Student/etudiant', $data);
           }
 
           public function addStudents(){
@@ -36,28 +36,31 @@
           }
 
       }
-      public function etudiantEdit($id,$data) {
+      public function etudiantEdit($id) {
 
-        
         if(isset($_POST['editStudent'])){
 
-        $data = [
-          'id' => $id ,
-          'Matricule' => trim($_POST['stud_Matricule']),
-          'Name' => trim($_POST['stud_Name']),
-          'Genre' => trim($_POST['stud_Genre']),
-          'Classe' => trim($_POST['stud_Classe']),
-          'Adresse' => trim($_POST['stud_Adresse']),
-          'Date' => trim($_POST['stud_Date_Naissance']),
-          'studentParent' => trim($_POST['stud_Parent_Name']),
-          'Email' => trim($_POST['stud_Email']),
-          'foreign_key' => trim($_POST['parent_id'])
-        ];
+          $data = [
+            'Matricule' => trim($_POST['stud_Matricule']),
+            'Name' => trim($_POST['stud_Name']),
+            'Genre' => trim($_POST['stud_Genre']),
+            'Classe' => trim($_POST['stud_Classe']),
+            'Adresse' => trim($_POST['stud_Adresse']),
+            'Date' => trim($_POST['stud_Date_Naissance']),
+            'studentParent' => trim($_POST['stud_Parent_Name']),
+            'Email' => trim($_POST['stud_Email']),
+            'foreign_key' => trim($_POST['parent_id'])
+          ];
+  
+          $this->studentModel->editStudent($id,$data);
+  
+          redirect('etudiants/showStudents');
+        }
 
-        $data = $this->studentModel->editStudent($data);
-
-        redirect('etudiants/showStudents');
-      }
+       $data  = $this->studentModel->getStudentDataById($id);
+        
+        $this->view('pages/Student/editStudent',$data);
+        
       }
 
       
